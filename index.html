@@ -12,9 +12,11 @@
         <h1>{{name}}, is it you?</h1>
         <p>Yes, My name is {{name}}</p>
 
-        <button v-on:click="add(10)"> Add a year </button>
+        <button v-on:click.once="add(10)"> Add a year </button>
         <button v-on:click="subtract(5)"> Subtract a year </button>
         <p>My age is {{age}}</p>
+
+        <div v-for="people in peoples">Name: {{people.name}}, Age: {{people.age}}</div>
     </div>
 
     <script src="app.js"></script>
